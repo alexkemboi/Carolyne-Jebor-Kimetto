@@ -4,9 +4,66 @@
     font-size: 24px; 
     font-weight: extrabold;
 }
+p.textFont {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: lefts;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
 .headingFont{
     font-weight: 800 ;
     font-family: 'Roboto', sans-serif; 
     font-size: 48px; 
     font-weight: extrabold;
 }
+
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+/* Reduce font size of headings */
+h1, h3, h4 {
+font-size: 24px;
+}
+/* Reduce top margin of card title row */
+.card-title > .row:first-of-type {
+margin-bottom: 1.5rem;
+}
+/* Center the profile picture */
+.card-title > .row:last-of-type > .col-5 {
+    text-align: center;}}
+
+
+.bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 400%;
+        object-fit: cover;
+      }
+/* CSS */
+.background-video::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 400%;
+    z-index: -1;
+    opacity: 0.5;
+    overflow: hidden;
+  }
+  
+  .background-video video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+      
