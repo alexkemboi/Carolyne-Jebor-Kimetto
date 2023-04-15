@@ -1,3 +1,84 @@
+/* Change background color on hover */
+.nav-link:hover {
+  background-color: lightgreen;
+}
+
+/* Change text color on hover */
+.nav-link:hover {
+  color: green;
+}
+
+/* Scale nav.nav-link on hover */
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+/* Add box shadow on hover */
+.nav-link:hover {
+  box-shadow: green;
+}
+
+/* Change background color on hover */
+.nav-link:active {
+  background-color: lightgreen;
+}
+
+/* Change text color on ac:active */
+.nav-link:active {
+  color: green;
+}
+
+/* Scale nav.nav-link on ac:active */
+.nav-link:active {
+  transform: scale(1.1);
+}
+
+/* Add box shadow on ac:active */
+.nav-link:active {
+  box-shadow: green;
+}
+
+/* Change background color on hover */
+.btn:hover {
+  background-color: lightgreen;
+}
+
+/* Change text color on hover */
+.btn:hover {
+  color: black;
+}
+
+/* Scale nav.btn on hover */
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Add box shadow on hover */
+.btn:hover {
+  box-shadow: black;
+}
+
+/* Change background color on hover */
+.btn:active {
+  background-color:darkgreen;
+}
+
+/* Change text color on act:active */
+.btn:active {
+  color: green;
+}
+
+/* Scale nav.btn on act:active */
+.btn:active {
+  transform: scale(1.1);
+}
+
+/* Add box shadow on act:active */
+.btn:active {
+  box-shadow: green;
+}
+
+
 .textFont{ 
     font-weight: 400 ;
     font-family: 'Roboto', sans-serif; 
@@ -8,7 +89,6 @@ p.textFont {
     padding: 20px;
     margin: 0 auto;
     text-align: lefts;
-    font-style: italic;
     font-family: 'Times New Roman', Times, serif;
   }
   
