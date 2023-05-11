@@ -1,9 +1,7 @@
-// Get the element where you want to add the contact section
 const contactSection = document.getElementById("contact-section");
 
-// Create the HTML structure for the contact section
 const contactHTML = `
-<form>
+<form onsubmit="sendForm()">
 <div class="form-group">
   <label for="first-name">First Name:</label>
   <input class="form-control" type="text" id="first-name" name="first-name" required>
@@ -24,18 +22,41 @@ const contactHTML = `
 </form>
 
 `;
-
-// Add the HTML code to the contact section element
 contactSection.innerHTML = contactHTML;
 
+function sendForm(e) {
+  e.preventDefault();
+  const firstName = document.getElementById("first-name").value;
+  const secondName = document.getElementById("second-name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
+  const data = {
+    from_name: `${firstName} ${secondName}`,
+    from_email: email,
+    message: message,
+  };
+  console.log(data);
+  const params = JSON.stringify(data);
+  const emailTo = "alexkemboi97@gmail.com";
 
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", `https://formspree.io/f/${emailTo}`);
+  xhr.setRequestHeader("Content-type", "application/json");
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      console.log("Email sent successfully:", xhr.responseText);
+      alert("Message sent successfully!");
+    } else {
+      console.log("Email error:", xhr.responseText);
+      alert("An error occurred while sending the message.");
+    }
+  };
+  xhr.send(params);
+}
 
-//add footer to website
-// Get the element where you want to add the footer
 const footer = document.getElementById("footer-section");
 
-// Create the HTML structure for the footer
 const footerHTML = `
 <div class="row">
   <div class="col-sm-4">
@@ -77,5 +98,4 @@ const footerHTML = `
 
 `;
 
-// Add the HTML code to the footer element
 footer.innerHTML = footerHTML;
