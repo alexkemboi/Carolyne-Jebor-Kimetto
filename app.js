@@ -16,7 +16,7 @@ const contactHTML = `
 </div>
 <div class="form-group">
   <label for="message">Message:</label>
-  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+  <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
 </div>
 <button class="btn btn-dark mt-3" type="submit">Send</button>
 </form>
